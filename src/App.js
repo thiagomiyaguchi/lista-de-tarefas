@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Lista from './components/Lista';
 
 function App() {
+  const [tarefa, setTarefa] = useState('');
+  const [lista, setLista] = useState(
+    JSON.parse(localStorage.getItem('lista')) || []
+  );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const novaTarefa = { id: new Date().getTime(), tarefa: tarefa };
+    setLista([...lista, novaTarefa]);
+    setTarefa('');
+  };
+
+  const removerTarefa = (id) => {
+    setLista(lista.filter((item) => item.id !== id));
+  };
+
+  useEffect(() => {
+    localStorage.setItem('lista', JSON.stringify(lista));
+  }, [lista]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Lista de Tarefas</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          required={true}
+          type='text'
+          value={tarefa}
+          onChange={(e) => setTarefa(e.target.value)}
+        />
+        <button>Cadastrar</button>
+      </form>
+      <Lista lista={lista} removerTarefa={removerTarefa} />
     </div>
   );
 }
