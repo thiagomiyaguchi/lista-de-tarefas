@@ -25,17 +25,23 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Lista de Tarefas</h1>
-      <form onSubmit={handleSubmit}>
+      <div className='header'>
+        <img className='imgHeader' src="https://static.vecteezy.com/system/resources/previews/009/362/738/non_2x/tick-icon-accept-approve-sign-design-free-png.png"/>
+        <p className='titleHeader'>App Lista Tarefas</p>
+      </div>
+      <form className='form' onSubmit={handleSubmit}>
         <input
+          className='input'
           required={true}
           type='text'
           value={tarefa}
           onChange={(e) => setTarefa(e.target.value)}
         />
-        <button>Cadastrar</button>
+        <button className='btnCadastrar'>+</button>
       </form>
+      <div className='listaTarefas'>
       <Lista lista={lista} removerTarefa={removerTarefa} />
+      </div>
     </div>
   );
 }
