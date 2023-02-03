@@ -1,26 +1,23 @@
-.App {
-  text-align: center;
-}
 
 .header{
   display: flex;
-
   background-color: rgb(66, 66, 66);
 }
 
+/* SALVAR IMG LOCALMENTE */
 .imgHeader{
   width: 60px;
   height: 50px;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .titleHeader{
   text-align: start;
   font-family: 'Bahnschrift', 'Arial Narrow', Arial, sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   color: white;
 }
 
@@ -32,19 +29,19 @@
 
 .input{
   border: solid 2px rgb(182, 181, 181);
-  border-radius: 10px;
-  width: 300px;
-  height: 35px;
+  border-radius: 0.6rem;
+  width: 18.75rem;
+  height: 2rem;
 }
 
 .btnCadastrar{
-  margin-left: 15px;
-  font-size: 30px;
-  width: 40px;
+  margin-left: 1.1rem;
+  font-size: 1.9rem;
+  width: 2.5rem;
   background-color: rgb(51, 190, 46);
   border: none;
   border-bottom: solid 4px rgb(2, 107, 2);
-  border-radius: 10px;
+  border-radius: 0.6rem;
   color: rgb(245, 234, 234);
 }
 
@@ -60,8 +57,9 @@
   display: flex;
   border: solid 2px rgb(150, 150, 150);
   width: 50%;
-  padding: 6%;
+  padding: 2%;
   margin: auto;
   margin-top: 5%;
+  
 }
 

@@ -1,15 +1,27 @@
 .tarefa {
   display: flex;
-  background-color: rgb(240, 235, 235);
+  flex-wrap: wrap;
+  /* background-color: rgb(240, 235, 235); */
   font-family: 'Century Gothic', 'sans-serif';
-  margin-bottom: 2%;
+  width: 100%;
+}
+.tarefa2 {
+  display: flex;
+  width: 100%;
+  border-top: solid 0.1rem rgb(192, 192, 192);
+  border-bottom: solid 0.1rem rgb(192, 192, 192);
+  margin-bottom: 3%;
+}
+
+.taskTitle{
+  width: 100%;
   
 }
+
 .btnDelete{
     width: 40px;
     height: 40px;
     margin-top: 7px;
-    margin-left: 600px;
     background-color: rgb(61, 196, 250);
     border: none;
     border-bottom: solid 4px rgb(32, 134, 202);
@@ -25,6 +37,6 @@
 }
 
 .btnDelete .btnImg{
-  width: 30px;
-  height: 30px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
