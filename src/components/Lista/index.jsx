@@ -2,10 +2,10 @@ import('./Lista.css');
 
 function Lista(props) {
   return (
-    <div>
+    <div className='tarefa'>
       {props.lista.map((item) => {
         return (
-          <div key={item.id} className='tarefa'>
+          <div key={item.id} className='tarefa2'>
             
             <p className='taskTitle'>{item.tarefa}</p>
             <button className='btnDelete' onClick={() => props.removerTarefa(item.id)}>
